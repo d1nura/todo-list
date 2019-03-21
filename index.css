@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #eb3e0a;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: white;
+}
+
+.container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+
+.enter {
+  position: relative;
+  width: 80%;
+  height: 10%;
+  margin: 0 auto;
+  margin-top: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.enter input {
+  width: 60%;
+  height: 100%;
+  padding-left: 2%;
+  font-size: 1.5rem;
+  background: black;
+  border: none;
+  border-bottom: 1px solid #ff0062;
+  color: #ff0062;
+  outline: none;
+}
+
+.enter input::-webkit-input-placeholder {
+  color: #ff0062;
+}
+
+.enter input:-ms-input-placeholder {
+  color: #ff0062;
+}
+
+.enter input::-ms-input-placeholder {
+  color: #ff0062;
+}
+
+.enter input::placeholder {
+  color: #ff0062;
+}
+
+.enter i {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.enter #plus {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #ff0062;
+}
+
+.enter #plus:hover {
+  color: #ff2e7e;
+}
+
+.todos {
+  position: relative;
+  width: 80%;
+  height: 65%;
+  margin: 0 auto;
+  margin-top: 2%;
+}
+
+.buttons {
+  position: relative;
+  width: 100%;
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.buttons button {
+  text-align: center;
+  width: 50%;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  color: #7e7e7e;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.buttons #currentBtn {
+  background: black;
+  color: #00e1ff;
+}
+
+.buttons #completedBtn {
+  background: black;
+}
+
+.buttons #completedBtn:focus {
+  color: magenta;
+}
+
+.items {
+  position: relative;
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+}
+
+.current,
+.completed {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  overflow-y: scroll;
+}
+
+.current {
+  background: black;
+  opacity: 1;
+}
+
+.completed {
+  background: black;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  opacity: 0;
+}
+
+.completed i {
+  color: #ffd900;
+  border-radius: 20rem;
+}
+
+.completed i:hover {
+  -webkit-box-shadow: 1px 1px 25px 5px #ffd900;
+          box-shadow: 1px 1px 25px 5px #ffd900;
+}
+
+.newTodo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+  width: 95%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 2%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #da0a59;
+}
+
+.newTodo i {
+  cursor: pointer;
+}
+
+.newTodo #todoValue {
+  width: 90%;
+  height: auto;
+}
+
+.newTodo #todoValue p {
+  padding: 0 2% 0 2%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+
+.newTodo #deleteTodo {
+  color: #d31d4a;
+  border-radius: 10rem;
+}
+
+.newTodo #deleteTodo:hover {
+  -webkit-box-shadow: 2px 2px 25px 5px #ff1e1e;
+          box-shadow: 2px 2px 25px 5px #ff1e1e;
+}
+
+.newTodo #sendToCompleted {
+  color: #17e46c;
+  border-radius: 10rem;
+}
+
+.newTodo #sendToCompleted:hover {
+  -webkit-box-shadow: 2px 2px 25px 5px lime;
+          box-shadow: 2px 2px 25px 5px lime;
+}
+
+#currentNo,
+#completedNo {
+  margin-left: 5%;
+  border: 1px solid #505050;
+  padding: 0.5rem;
+  border-radius: 20rem;
+}
+
+#currentNo {
+  color: #00e1ff;
+  border: 1px solid #12dfee;
+}
+
+#completedNo {
+  color: magenta;
+  border: 1px solid #ff18f3;
+}
+
+body::-webkit-scrollbar {
+  width: 1px;
+}
+
+/*
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+*/
+#editInput {
+  position: relative;
+  width: 90%;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  background: black;
+  color: white;
+  border-bottom: 1px solid whitesmoke;
+}
+
+#emptyTodo,
+#emptyComp {
+  color: #00e1ff;
+  text-align: center;
+  width: 50%;
+  padding: 2%;
+  font-size: 3rem;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+#emptyComp {
+  color: magenta;
+}
+/*# sourceMappingURL=index.css.map */
